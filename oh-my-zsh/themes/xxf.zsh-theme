@@ -15,7 +15,7 @@ function box_name {
 local current_dir='${PWD/#$HOME/~}'
 
 # VCS
-YS_VCS_PROMPT_PREFIX1="%{$fg[white]%}on%{$reset_color%} "
+YS_VCS_PROMPT_PREFIX1="%{$fg[white]%}:%{$reset_color%} "
 YS_VCS_PROMPT_PREFIX2="%{$fg[cyan]%}"
 YS_VCS_PROMPT_SUFFIX="%{$reset_color%} "
 YS_VCS_PROMPT_DIRTY=" %{$fg[red]%}✗"
@@ -45,18 +45,27 @@ ys_hg_prompt_info() {
   fi
 }
 
+# Ruby info
+local ruby_info='$(xxf_ruby_prompt)'
+xxf_ruby_prompt() {
+  # if this is a ruby project
+  if [[ -f '.ruby-version' ]]; then
+    echo -n "$(cat .ruby-version)"
+  fi
+}
+
 # Prompt format: \n # TIME USER at MACHINE in DIRECTORY on git:BRANCH STATE \n $
 PROMPT="
-%{$fg[cyan]%}%n \
-%{$fg[white]%}at \
+%{$fg[cyan]%}%n\
+%{$fg[white]%}:\
 %{$fg[green]%}$(box_name) \
-%{$fg[white]%}in \
-%{$terminfo[bold]$fg[yellow]%}${current_dir}%{$reset_color%} \
+%{$fg[magenta]%}${ruby_info} \
+%{$fg[white]%}\
+%{$terminfo[bold]$fg[yellow]%}${current_dir}%{$reset_color%}\
 ${hg_info} \
 ${git_info} \
 ${git_last_commit}
-%{$fg[red]%}%* \
-%{$terminfo[bold]$fg[white]%}› %{$reset_color%}"
+%{$terminfo[bold]$fg[white]%}$ %{$reset_color%}"
 
 if [[ "$USER" == "root" ]]; then
 PROMPT="
@@ -69,5 +78,5 @@ PROMPT="
 %{$terminfo[bold]$fg[yellow]%}[${current_dir}]%{$reset_color%}\
 ${hg_info}\
 ${git_info}
-%{$terminfo[bold]$fg[red]%}$ %{$reset_color%}"
+%{$terminfo[bold]$fg[red]%}# %{$reset_color%}"
 fi
