@@ -85,3 +85,4 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 export PATH="$HOME/.rbenv/bin:$PATH:$HOME/local/bin"
 eval "$(rbenv init -)"
+alias beg='bundle exec guard'
