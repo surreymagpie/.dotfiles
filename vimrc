@@ -2,7 +2,7 @@
 nmap <leader>l :set list!<CR>
 
 " Use the same symbols as TextMate for tabstops and EOLs
-set listchars=tab:▸\ ,eol:¬
+set listchars=tab:▸\ ,eol:¬,trail:·,nbsp:·
 
 set number
 set relativenumber
@@ -19,8 +19,15 @@ map <C-l> <C-w>l
 call plug#begin()
 Plug 'tpope/vim-sensible'
 Plug 'junegunn/seoul256.vim'
+Plug 'jiangmiao/auto-pairs'
+Plug 'MarcWeber/vim-addon-mw-utils'
+Plug 'tomtom/tlib_vim'
+Plug 'garbas/vim-snipmate'
+Plug 'honza/vim-snippets'
+Plug 'bling/vim-airline'
 Plug 'tomasr/molokai'
 Plug 'tpope/vim-rails'
+Plug 'ctrlpvim/ctrlp.vim'
 call plug#end()
 
 
@@ -32,6 +39,7 @@ if has("autocmd")
 
     autocmd FileType html setlocal ts=2 sts=2 sw=2 expandtab
     autocmd FileType css setlocal ts=2 sts=2 sw=2 expandtab
+    autocmd FileType ruby setlocal ts=2 sts=2 sw=2 expandtab
     autocmd FileType javascript setlocal ts=4 sts=4 sw=4 noexpandtab
 
     autocmd BufWritePre *.py,*.js,*.rb :call <SID>StripWhitespace()
@@ -51,4 +59,4 @@ function! <SID>StripWhitespace()
     let @/=_s
     call cursor(l, c)
 endfunction
-
+colorscheme seoul256
