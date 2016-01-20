@@ -32,7 +32,7 @@ call plug#end()
 
 " set 256 colours
 set t_Co=256
-colorscheme molokai
+colorscheme seoul256
 
 if has("autocmd")
     " Put file syntax preferences here
@@ -62,4 +62,3 @@ function! <SID>StripWhitespace()
     let @/=_s
     call cursor(l, c)
 endfunction
-colorscheme seoul256
