@@ -1,3 +1,12 @@
+# Lines configured by zsh-newuser-install
+HISTFILE=~/.zsh_history
+HISTSIZE=1000
+SAVEHIST=1000
+setopt appendhistory autocd
+unsetopt beep
+bindkey -e
+# End of lines configured by zsh-newuser-install
+#
 # Path to your oh-my-zsh installation.
 export ZSH=/home/rob/.oh-my-zsh
 export TERM=xterm-256color
@@ -41,7 +50,7 @@ ZSH_THEME="xxf"
 # Uncomment the following line if you want to change the command execution time
 # stamp shown in the history command output.
 # The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
-# HIST_STAMPS="mm/dd/yyyy"
+HIST_STAMPS="dd.mm.yyyy"
 
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
@@ -55,7 +64,7 @@ plugins=(git)
 
 # User configuration
 
-  export PATH="/home/rob/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
+export PATH="/home/rob/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -65,7 +74,7 @@ export LANG=en_GB.UTF-8
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
+export EDITOR='vim'
 # else
 #   export EDITOR='mvim'
 # fi
@@ -87,3 +96,4 @@ export LANG=en_GB.UTF-8
 export PATH="$HOME/.rbenv/bin:$PATH:$HOME/local/bin"
 eval "$(rbenv init -)"
 alias beg='bundle exec guard'
+
