@@ -9,6 +9,9 @@ set relativenumber
 set numberwidth=4
 set ts=4 sts=4 sw=4 expandtab
 
+" Fix powerline status on Arch
+let g:pymcd_powerline="py3"
+
 " Easily switch windows
 map <C-h> <C-w>h
 map <C-j> <C-w>j
@@ -28,6 +31,7 @@ Plug 'bling/vim-airline'
 Plug 'tomasr/molokai'
 Plug 'tpope/vim-rails'
 Plug 'ctrlpvim/ctrlp.vim'
+Plug 'Lokaltog/powerline'
 call plug#end()
 
 " set 256 colours
