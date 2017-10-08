@@ -1,5 +1,3 @@
-[init]
-  templatedir = ~/.git_template
 [push]
 	default = simple
 [color]
@@ -21,6 +19,7 @@
   pager = less -FRSX
 [merge]
   ff = only
+  tool = vimdiff
 [commit]
   template = ~/.gitmessage
 [fetch]
@@ -30,3 +29,9 @@
 [user]
   name = Rob Curtis
   email = surreymagpie@yahoo.co.uk
+[diff]
+  tool = vimdiff
+[difftool]
+  prompt = false
+[mergetool]
+  prompt = false
