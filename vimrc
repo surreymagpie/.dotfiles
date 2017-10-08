@@ -33,6 +33,7 @@ Plug 'tpope/vim-rails'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'Lokaltog/powerline'
 Plug 'tpope/vim-surround'
+Plug 'mattn/emmet-vim'
 call plug#end()
 
 " set 256 colours
