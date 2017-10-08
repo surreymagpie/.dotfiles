@@ -1,5 +1,5 @@
 [push]
-	default = simple
+  default = simple
 [color]
   ui = auto
 [alias]
