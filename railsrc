@@ -2,4 +2,3 @@
 --skip-bundle
 --database=postgresql
 --skip-keeps
--m ~/Sites/rails_starter_template/app_template.rb
