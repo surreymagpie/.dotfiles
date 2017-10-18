@@ -1,4 +1,4 @@
---skip-test-unit
+--skip-test
 --skip-bundle
 --database=postgresql
 --skip-keeps
