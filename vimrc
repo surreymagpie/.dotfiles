@@ -8,6 +8,7 @@ set number
 set relativenumber
 set numberwidth=4
 set ts=4 sts=4 sw=4 expandtab
+set nobackup
 
 " Fix powerline status on Arch
 let g:pymcd_powerline="py3"
