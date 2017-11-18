@@ -98,3 +98,4 @@ eval "$(rbenv init -)"
 export PATH="./bin:$PATH"
 alias beg='bundle exec guard'
 
+. /usr/share/defaults/etc/profile.d/vte.sh
