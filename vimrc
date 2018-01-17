@@ -34,6 +34,7 @@ Plug 'tpope/vim-rails'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'Lokaltog/powerline'
 Plug 'tpope/vim-surround'
+Plug 'tpope/vim-commentary'
 Plug 'mattn/emmet-vim'
 call plug#end()
 
