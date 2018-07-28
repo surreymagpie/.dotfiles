@@ -98,4 +98,10 @@ eval "$(rbenv init -)"
 export PATH="./bin:$PATH"
 alias beg='bundle exec guard'
 
+# Configuration for Node Version Manager (NVM)
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+
 . /usr/share/defaults/etc/profile.d/vte.sh
